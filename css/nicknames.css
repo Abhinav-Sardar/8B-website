@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+::-webkit-scrollbar {
+    width:1.5vw ; 
+    /* border:1px solid black ; */
+    border:1px solid rgb(141, 130, 130);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(177, 169, 169);
+}
+::-webkit-scrollbar-thumb {
+    /* border-radius: 20px; */
+    background-color: orange;
+}
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+h2 {
+    padding:2vh 0 ;
+}
+ul.nav {
+    background-color: black;
+    color:white ; 
+    height:10vh; 
+}
+.nav-items{
+    display: inline-block;
+    float:right ; 
+    height:81% ; 
+    /* border:1px solid black;  */
+    padding:0 3vw ; 
+    font-size: 4vh;;
+    padding-top:1.581999999099934985498549854985489vh ; 
+    font-family: 'Lexend', sans-serif;
+    transition: 600ms ease-in-out;
+    border:1px solid white ; 
+    font-weight:bold;
+    letter-spacing:2px;
+    color:white ; 
+}
+.nav-items:hover{ 
+    /* color:black ;  */
+    background-color: white ; 
+    color:black ; 
+}
+.nav-items:hover a {
+    color:black ; 
+}
+.left {
+    float:left ; 
+    font-family: 'Pattaya', sans-serif;
+}
+.left:hover {
+    color:white ; 
+    background-color: black;
+}
+* {
+    padding:0 ; 
+    margin:0 ; 
+}
+center {
+    color:white;
+}
+*::selection {
+    background-color: purple;
+    color:White;
+    
+   ;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-family: 'Jost', sans-serif;
+}

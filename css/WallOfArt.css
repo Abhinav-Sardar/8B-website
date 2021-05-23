@@ -1,0 +1,37 @@
+ul.nav {
+    background-color: black;
+    color:white ; 
+    height:10vh; 
+}
+.left:hover {
+    color:white ; 
+    background-color: black;
+}
+
+.nav-items{
+    display: inline-block;
+    float:right ; 
+    height:81% ; 
+    /* border:1px solid black;  */
+    padding:0 3vw ; 
+    font-size: 4vh;;
+    padding-top:1.49vh ; 
+    font-family: 'Lexend', sans-serif;
+    transition: 600ms ease-in-out;
+    border:1px solid white ; 
+    font-weight:bold;
+    letter-spacing:2px;
+    color:white ; 
+}
+li:hover{ 
+    color:black ; 
+    background-color: white;
+}
+li:hover a {
+    color:black ; 
+}
+.left {
+    float:left ; 
+    font-family: 'Pattaya', sans-serif;
+    color:white;
+}
