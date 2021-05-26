@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap');
+
 ul.nav {
     background-color: black;
     color:white ; 
-    height:10vh; 
+    height:10vh;
+}
+
+*{
+    padding: 0;
+    margin:0;
+}
+.left:hover {
+    color:white ; 
+    background-color:black;
+}
+.left {
+    float:left ; 
+    font-family: 'Pattaya', sans-serif;
 }
 .left:hover {
     color:white ; 
@@ -15,16 +31,17 @@ ul.nav {
     /* border:1px solid black;  */
     padding:0 3vw ; 
     font-size: 4vh;;
-    padding-top:1.49vh ; 
+    padding-top:1.581999999099934985498549854985489vh ; 
     font-family: 'Lexend', sans-serif;
     transition: 600ms ease-in-out;
     border:1px solid white ; 
     font-weight:bold;
     letter-spacing:2px;
     color:white ; 
+    font-family: 'Lexend', sans-serif;
 }
 li:hover{ 
-    color:black ; 
+    color:black; 
     background-color: white;
 }
 li:hover a {
@@ -35,3 +52,15 @@ li:hover a {
     font-family: 'Pattaya', sans-serif;
     color:white;
 }
+
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
+    background-size:600%;}
+    .left {
+        float:left ; 
+        font-family: 'Pattaya', sans-serif;
+    }
+    .left:hover {
+        color:white ; 
+        background-color: black;
+    }

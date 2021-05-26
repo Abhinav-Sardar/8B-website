@@ -1,44 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap");
 * {
-    padding:0 ; 
-    margin:0;
+	padding: 0;
+	margin: 0;
 }
 
 ul.nav {
-    background-color: black;
-    color:white ; 
-    height:10vh; 
+	background-color: lightseagreen;
+	color: white;
+	height: 10vh;
 }
 
-.nav-items{
-    display: inline-block;
-    float:right ; 
-    height:81% ; 
-    /* border:1px solid black;  */
-    padding:0 3vw ; 
-    font-size: 4vh;;
-    padding-top:1.581999999099934985498549854985489vh ; 
-    font-family: 'Lexend', sans-serif;
-    transition: 600ms ease-in-out;
-    border:1px solid white ; 
-    font-weight:bold;
-    letter-spacing:2px;
-    color:white ; 
+.nav-items {
+	display: inline-block;
+	float: right;
+	height: 81%;
+	/* border:1px solid black;  */
+	padding: 0 3vw;
+	font-size: 4vh;
+	padding-top: 1vh;
+	font-family: "Lexend", sans-serif;
+	transition: 500ms ease-in-out;
+	border: 1px solid blue;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: greenyellow;
+	background-color: lightseagreen;
 }
-li:hover{ 
-    color:black ; 
-    background-color: white;
+/*guys i am lagging 1 sec
+*/
+li:hover {
+	color: red;
+	background-color: peachpuff;
+	transform: scale(0.92);
+	/* border: 1px solid white; */
 }
+
 li:hover a {
-    color:black ; 
+	color: black;
 }
 .left:hover {
-    color:white ; 
-    background-color: black;
+	/* color: white; */
+	background-color: lightseagreen;
+	transform: scale(1);
 }
 .left {
-    float:left ; 
-    font-family: 'Pattaya', sans-serif;
-    color:white;
+	float: left;
+	font-family: "Pattaya", sans-serif;
+	border: 1;
+	border-color: yellow;
 }
