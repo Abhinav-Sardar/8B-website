@@ -7,12 +7,13 @@
 }
 ul.nav {
     background-color: black;
-    color:white ; 
+    color:black; 
     height:10vh; 
 }
 .left:hover {
-    color:white ; 
+    color: white ; 
     background-color: black;
+    transform: scale(1);
 }
 
 .nav-items{
@@ -24,23 +25,25 @@ ul.nav {
     font-size: 4vh;;
     padding-top:1.49vh ; 
     font-family: 'Lexend', sans-serif;
-    transition: 600ms ease-in-out;
+    transition: 600ms ease-out;
     border:1px solid white ; 
     font-weight:bold;
     letter-spacing:2px;
-    color:white ; 
+    color:white ;
 }
 li:hover{ 
     color:black ; 
     background-color: white;
+    transform: scale(.92);
 }
 li:hover a {
-    color:black ; 
+    color:white ; 
 }
 .left {
     float:left ; 
     font-family: 'Pattaya', sans-serif;
     color:white;
+    border:none;
 }
 main.content , img {
     /* border:1px solid black ;  */
@@ -53,11 +56,13 @@ main.main {
 }
 img {
     /* height:200px ;  */
-    height:90vh ; 
+    height:89vh ; 
 }
 main.content {
     flex-basis: 70vw;
     border:0  ;
+    color:white ; 
+    padding-left:1vw ; 
 }
 h2 {
     font-size:4.5vh ; 
@@ -72,4 +77,6 @@ span {
 
 .main{
     font-family: 'Work Sans', sans-serif;
-}
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
+    background-size:600%;}
+

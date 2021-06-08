@@ -1,14 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {
 	padding: 0;
 	margin: 0;
 }
 
 ul.nav {
-	background-color: lightseagreen;
+	background-color: black;
 	color: white;
 	height: 10vh;
+}
+.left:hover {
+	color: white;
+	background-color: black;
+	transform: scale(1);
 }
 
 .nav-items {
@@ -18,35 +24,32 @@ ul.nav {
 	/* border:1px solid black;  */
 	padding: 0 3vw;
 	font-size: 4vh;
-	padding-top: 1vh;
+	padding-top: 1.49vh;
 	font-family: "Lexend", sans-serif;
-	transition: 500ms ease-in-out;
-	border: 1px solid blue;
+	transition: 600ms ease-in-out;
+	border: 1px solid white;
 	font-weight: bold;
 	letter-spacing: 2px;
-	color: greenyellow;
-	background-color: lightseagreen;
+	color: white;
 }
-/*guys i am lagging 1 sec
-*/
 li:hover {
-	color: red;
-	background-color: peachpuff;
-	transform: scale(0.92);
-	/* border: 1px solid white; */
+	color: black;
+	background-color: white;
+	transform: scale(.92);
 }
-
 li:hover a {
 	color: black;
-}
-.left:hover {
-	/* color: white; */
-	background-color: lightseagreen;
-	transform: scale(1);
+
 }
 .left {
 	float: left;
 	font-family: "Pattaya", sans-serif;
-	border: 1;
-	border-color: yellow;
+	color: white;
+	border:none;
+}
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
+    background-size:600%;
+	color:white;
+	font-family:"Open Sans", sans-serif;
 }
