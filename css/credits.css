@@ -96,6 +96,14 @@ h2{
 
 .img {
 	flex:3 ; 
+	display:flex ; 
+	justify-content: center ; 
+	align-items: center;
+}
+img{
+	height:60% ; 
+	width:40%; 
+	border-radius:50%;
 }
 .info {
 	border-top: 1px solid gold;
