@@ -3,8 +3,9 @@ const data = [
     name: "Abhinav Sardar",
     hobbies: "Guitar , Coding , Coding and alot of Coding",
     Birthday: "19th March",
-    Tagline: "Success is about winning the war , not every battle.",
+    Tagline: "I like my girls like I like my meat. *Tasty*",
     Role: "Main Coder",
+    img: "../images/Nerd.jpg",
   },
   {
     name: "Shashank Chandak",
@@ -12,6 +13,7 @@ const data = [
     Birthday: "21st August",
     Tagline: "Where there is a will, there is a way!",
     Role: "Coder",
+    img: "../images/Shashank.jpeg",
   },
   {
     name: "Anirudha",
@@ -24,7 +26,40 @@ const data = [
     name: "Abhiroop Sarkar",
     hobbies: "Guitar, Sketching & Gaming!!!!",
     Birthday: "11th March",
-    Tagline: "Bwahahahaaaa 8D",
-    Role: "Designer, Coder",
+    Tagline: "Bishhhhh",
+    Role: "Designer",
   },
 ];
+const backdrop = document.querySelector(".backdrop");
+const modal = document.querySelector(".modal");
+const persons = document.querySelectorAll(".person");
+backdrop.addEventListener("click", () => {
+  modal.style.height = "0";
+  modal.style.width = "0";
+  backdrop.style.display = "none";
+  modal.innerHTML = "";
+});
+persons.forEach((p, index) => {
+  p.addEventListener("click", async () => {
+    modal.style.height = "50vh";
+    modal.style.width = "50vw";
+    backdrop.style.display = "block";
+    const user = data[index];
+    modal.innerHTML = `
+
+
+   
+    <div class="wrapper">
+    <span>Name: ${user.name}</span>
+    <span>Role: ${user.Role}</span>
+    <span>Hobbies: ${user.hobbies}</span>
+    <span>Tagline: ${user.Tagline}</span>
+    <span>Birthday: ${user.Birthday}</span>
+
+    </div>
+    
+    `;
+  });
+}); // yo
+// yoooooo sunnooo pls look at the presentation
+// gois look at
