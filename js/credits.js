@@ -21,6 +21,7 @@ const data = [
     Birthday: "3rd October",
     Tagline: "You may have won the day, but the year is mine :D",
     Role: "Main idea",
+    img: "../images/AnniRudh.jpg",
   },
   {
     name: "Abhiroop Sarkar",
@@ -28,6 +29,7 @@ const data = [
     Birthday: "11th March",
     Tagline: "Bishhhhh",
     Role: "Designer",
+    img: "../images/Abhiroop.jpg",
   },
 ];
 const backdrop = document.querySelector(".backdrop");
@@ -41,8 +43,8 @@ backdrop.addEventListener("click", () => {
 });
 persons.forEach((p, index) => {
   p.addEventListener("click", async () => {
-    modal.style.height = "50vh";
-    modal.style.width = "50vw";
+    modal.style.height = "70vh";
+    modal.style.width = "60vw";
     backdrop.style.display = "block";
     const user = data[index];
     modal.innerHTML = `
@@ -50,6 +52,7 @@ persons.forEach((p, index) => {
 
    
     <div class="wrapper">
+    <img src='${user.img}'/>
     <span>Name: ${user.name}</span>
     <span>Role: ${user.Role}</span>
     <span>Hobbies: ${user.hobbies}</span>
