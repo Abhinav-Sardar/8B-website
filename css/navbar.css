@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 1vw;
+  /* border:1px solid black ; */
+  border: 1px solid lightblue;
+}
+::-webkit-scrollbar-track {
+  background-color: lightblue;
+}
+::-webkit-scrollbar-thumb {
+  background-color: cadetblue;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  padding-top: 0.06vh;
+}
+ul.nav {
+  display: flex;
+  height: 7vh;
+  background-color: black;
+  align-items: center;
+  list-style: none;
+
+  border: 1px solid white;
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  width: 200px;
+  transition: 600ms ease-in-out;
+  border-left: 1px solid white;
+  font-family: "Raleway", sans-serif;
+}
+.nav-item:hover {
+  background-color: white;
+  color: black;
+  transform: scale(0.9);
+}
+.links {
+  display: flex;
+  height: 100%;
+  flex: 0.9;
+  justify-content: flex-end;
+}
+
+.left {
+  font-family: "Shizuru";
+  color: white;
+  border: none;
+  flex: 0.1;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  padding-left: 2vw;
+}

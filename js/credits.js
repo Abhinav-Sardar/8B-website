@@ -5,13 +5,13 @@ const data = [
     Birthday: "19th March",
     Tagline: "I like my girls like I like my meat. *Tasty*",
     Role: "Main Coder",
-    img: "../images/Nerd.jpg",
+    img: "../images/Abhinav.jpg",
   },
   {
     name: "Shashank Chandak",
-    hobbies: "Guitar , Coding , a LOT of coding!",
+    hobbies: "Guitar, Customizing Keebs, Coding",
     Birthday: "21st August",
-    Tagline: "Where there is a will, there is a way!",
+    Tagline: "Trying to make my life better :)",
     Role: "Coder",
     img: "../images/Shashank.jpeg",
   },
@@ -63,6 +63,12 @@ persons.forEach((p, index) => {
     
     `;
   });
-}); // yo
-// yoooooo sunnooo pls look at the presentation
-// gois look at
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.style.height = "0";
+    modal.style.width = "0";
+    backdrop.style.display = "none";
+    modal.innerHTML = "";
+  }
+});

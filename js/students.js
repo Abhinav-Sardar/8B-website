@@ -49,13 +49,7 @@ const students = [
     rollNo: 13,
     hobbies: "Playing PC Games, Watching Anime, Drawing.",
   },
-  {
-    /*name: "Ur dad ",
-    tagline: "Be whomever you want to be , until you like it , it's correct.",
-    bday: "20th Jan, 2008",
-    rollNo: 9,
-    hobbies: "Dancing , playing with my dog , art , cooking , etc..", */
-  },
+
   {
     name: "Arya Thakare",
     tagline: "",
@@ -77,6 +71,52 @@ const students = [
     rollNo: 27,
     hobbies: "Reading books.",
   },
+  {
+    name: "Yuvan Gupta",
+    tagline: "Current master of pav bhaji.",
+    bday: "19th June, 2008",
+    rollNo: 36,
+    hobbies: "Painting.",
+  },
+  {
+    name: "Saatwik Mokashi",
+    tagline: "I'm cringe asf",
+    bday: "3rd April,2008",
+    rollNo: 39,
+    hobbies: "",
+  },
+  {
+    name: "B. Ramya Prakruthi",
+    tagline: "Shine, Dream, Smile ",
+    bday: "23rd April, 2009",
+    rollNo: 15,
+    hobbies: "Singing & Reading.",
+  },
+  {
+    name: "Vaishnav",
+    hobbies: "Editing",
+    bday: "7th april",
+    rollNo: 34,
+    tagline: "Putting my grades up for adoption cuz I cant raise them",
+  },
 ];
-
-console.log(students.length);
+let index = 0;
+const studentsContainer = document.querySelector(".students");
+setInterval(() => {
+  if (index === students.length - 1) return;
+  else {
+    const { name, tagline, rollNo, hobbies, bday } = students[index];
+    const newStudent = document.createElement("section");
+    newStudent.classList.add("student");
+    studentsContainer.appendChild(newStudent);
+    newStudent.innerHTML = `
+    <span>Name: ${name}</span>
+    <span>Tagline: ${tagline}</span>
+    <span>Roll No: ${rollNo}</span>
+    <span>Hobbies: ${hobbies}</span>
+    <span>Birthday 🎂: ${bday}</span>
+    
+    `;
+    index += 1;
+  }
+}, 500);

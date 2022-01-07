@@ -2,23 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-}
-::-webkit-scrollbar {
-  width: 1.3vw;
-  /* border:1px solid black ; */
-  border: 1px solid lightblue;
-}
-::-webkit-scrollbar-track {
-  background-color: lightblue;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: cadetblue;
-}
 
+.container {
+  display: flex;
+  color: rgb(255, 255, 255);
+  width: 100vw;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 body {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
   background-repeat: no-repeat;
@@ -26,61 +17,12 @@ body {
   text-align: justify;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  padding-top: 0.06vh;
-}
-ul.nav {
-  background-color: black;
-  color: white;
-  height: 10vh;
-}
-.left:hover {
-  color: white;
-  background-color: black;
-  transform: scale(1);
-}
-.nav-items {
-  display: inline-block;
-  float: right;
-  height: 81%;
-  /* border:1px solid black;  */
-  padding: 0 3vw;
-  font-size: 4vh;
-  padding-top: 1.49vh;
-  font-family: "Lexend", sans-serif;
-  transition: 600ms ease-in-out;
-  border: 1px solid white;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: white;
-}
-li:hover {
-  color: black;
-  background-color: white;
-  transform: scale(0.92);
-}
-li:hover a {
-  color: black;
-}
-.left {
-  float: left;
-  font-family: "Pattaya", sans-serif;
-  color: white;
-  border: none;
-}
-.container {
-  display: flex;
-  color: white;
-  width: 100vw;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 .person {
   height: 25vw;
   width: 20vw;
-  border: 1px solid white;
+  border: 2px solid rgb(0, 247, 255);
+  outline-color: red;
+  outline-style: inset;
   margin: 2vw 10vw;
   border-radius: 10px;
   display: flex;
@@ -102,7 +44,7 @@ li:hover a {
   height: 20%;
   display: flex;
   justify-content: center;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(37, 151, 122);
   align-items: center;
 }
 body {
@@ -119,7 +61,7 @@ body {
   height: 0;
   width: 0;
   border-radius: 10px;
-  background-color: beige;
+  background-color: gold;
 }
 .backdrop {
   position: fixed;
@@ -143,6 +85,7 @@ body {
 }
 .modal .wrapper span {
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
   font-size: 1.5vw;
 }
 .modal img {

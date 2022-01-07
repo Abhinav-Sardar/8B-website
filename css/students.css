@@ -1,55 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-* {
-	padding: 0;
-	margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap");
+
+body {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
+  background-size: 600%;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.student {
+  font-family: "Be Vietnam Pro", sans-serif;
+  display: flex;
+  letter-spacing: 1.5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(221, 224, 1);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  height: 300px;
+  width: 420px;
+  margin: 25px;
+  border-radius: 20px;
+  animation: 250ms fade ease-out;
+}
+.students {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.student > span {
+  margin: 10px 0;
 }
 
-ul.nav {
-	background-color: black;
-	color: white;
-	height: 10vh;
-}
-.left:hover {
-	color: white;
-	background-color: black;
-	transform: scale(1);
-}
-
-.nav-items {
-	display: inline-block;
-	float: right;
-	height: 81%;
-	/* border:1px solid black;  */
-	padding: 0 3vw;
-	font-size: 4vh;
-	padding-top: 1.49vh;
-	font-family: "Lexend", sans-serif;
-	transition: 600ms ease-in-out;
-	border: 1px solid white;
-	font-weight: bold;
-	letter-spacing: 2px;
-	color: white;
-}
-li:hover {
-	color: black;
-	background-color: white;
-	transform: scale(.92);
-}
-li:hover a {
-	color: black;
-
-}
-.left {
-	float: left;
-	font-family: "Pattaya", sans-serif;
-	color: white;
-	border:none;
-}
-body{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
-    background-size:600%;
-	color:white;
-	font-family:"Open Sans", sans-serif;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
