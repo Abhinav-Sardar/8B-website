@@ -11,7 +11,7 @@ const data = [
     name: "Shashank Chandak",
     hobbies: "Guitar, Customizing Keebs, Coding",
     Birthday: "21st August",
-    Tagline: "Trying to make my life better :)",
+    Tagline: "Work Hard, Party Hard!",
     Role: "Coder",
     img: "../images/Shashank.jpeg",
   },

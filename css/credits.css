@@ -20,9 +20,7 @@ body {
 .person {
   height: 25vw;
   width: 20vw;
-  border: 2px solid rgb(0, 247, 255);
-  outline-color: red;
-  outline-style: inset;
+  border: 2px solid gold;
   margin: 2vw 10vw;
   border-radius: 10px;
   display: flex;

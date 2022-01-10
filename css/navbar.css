@@ -24,10 +24,15 @@
 }
 ul.nav {
   display: flex;
-  height: 7vh;
+  height: 8vh;
   background-color: black;
   align-items: center;
   list-style: none;
+  position:sticky ; 
+  top:0 ; 
+  left:0 ; 
+  right:0 ;
+  bottom:0 ; 
 
   border: 1px solid white;
 }

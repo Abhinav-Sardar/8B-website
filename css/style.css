@@ -10,6 +10,7 @@ main.main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+
 }
 img {
   /* height:200px ;  */

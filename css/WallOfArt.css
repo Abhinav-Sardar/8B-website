@@ -4,31 +4,23 @@
 body {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
   background-size: 600%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-.left {
-  float: left;
-  font-family: "Pattaya", sans-serif;
-}
-.left:hover {
-  color: white;
-  background-color: black;
-}
-
-.intro {
-  color: white;
-}
-#images img {
-  max-height: 50vh;
-  max-width: 40vw;
-}
-#images {
+.imgs {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 92vh;
 }
-.image {
-  padding: 0 3vw;
-  color: whitesmoke;
-  /* padding:1vh ;  */
+.imgs > * {
+  margin: 0 100px;
+}
+img {
+  height: 500px;
 }

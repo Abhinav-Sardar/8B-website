@@ -80,7 +80,7 @@ const students = [
   },
   {
     name: "Saatwik Mokashi",
-    tagline: "I'm cringe asf",
+    tagline: "Newbie of the class",
     bday: "3rd April,2008",
     rollNo: 39,
     hobbies: "",
@@ -100,23 +100,70 @@ const students = [
     tagline: "Putting my grades up for adoption cuz I cant raise them",
   },
 ];
-let index = 0;
 const studentsContainer = document.querySelector(".students");
-setInterval(() => {
-  if (index === students.length - 1) return;
-  else {
-    const { name, tagline, rollNo, hobbies, bday } = students[index];
-    const newStudent = document.createElement("section");
-    newStudent.classList.add("student");
-    studentsContainer.appendChild(newStudent);
-    newStudent.innerHTML = `
-    <span>Name: ${name}</span>
-    <span>Tagline: ${tagline}</span>
-    <span>Roll No: ${rollNo}</span>
-    <span>Hobbies: ${hobbies}</span>
-    <span>Birthday 🎂: ${bday}</span>
+
+const input = document.querySelector("input");
+const select = document.querySelector("select");
+input.oninput = () => {
+  onInput(input.value);
+};
+let currentField = "All";
+function renderStudents(param) {
+  let html = "";
+  param.forEach((student, index) => {
+    const { name, tagline, rollNo, hobbies, bday } = student;
+
+    html += `
+ <section class="student">
+ <span>Name: ${name}</span>
+ <span>Tagline: ${tagline}</span>
+ <span>Roll No: ${rollNo}</span>
+ <span>Hobbies: ${hobbies}</span>
+ <span>Birthday 🎂: ${bday}</span>
+ </section>
     
     `;
-    index += 1;
+  });
+  console.log(html);
+  studentsContainer.innerHTML = html || "<span>No results found</span>";
+}
+renderStudents(students);
+
+function checkify(first, second) {
+  return String(first)
+    .toLocaleLowerCase()
+    .trim()
+    .includes(String(second).toLocaleLowerCase().trim());
+}
+function onInput(char) {
+  if (currentField === "All") {
+    const filteredStudents = students.filter(
+      (student) =>
+        checkify(student.name, char) ||
+        checkify(student.tagline, char) ||
+        checkify(student.bday, char) ||
+        checkify(student.hobbies, char)
+    );
+    renderStudents(filteredStudents);
+  } else {
+    const filteredStudents = students.filter((student) =>
+      checkify(student[currentField], char)
+    );
+    renderStudents(filteredStudents);
   }
-}, 500);
+}
+
+select.addEventListener("change", (e) => {
+  // const { name, tagline, rollNo, hobbies, bday } = student;
+  const { value } = e.target;
+  if (value === "Tagline" || value === "Name" || value === "Hobbies") {
+    currentField = String(value).toLocaleLowerCase();
+  } else if (value === "Roll No.") {
+    currentField = "rollNo";
+  } else if (value === "Birthday") {
+    currentField = "bday";
+  } else {
+    currentField = "All";
+  }
+  onInput(input.value);
+});
