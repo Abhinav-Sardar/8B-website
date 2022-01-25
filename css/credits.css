@@ -11,9 +11,6 @@
   flex-wrap: wrap;
 }
 body {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
-  background-repeat: no-repeat;
-  background-size: 600%;
   text-align: justify;
 }
 
@@ -55,11 +52,11 @@ body {
   transform: translate(-50%, -50%);
   transition: 500ms ease-in-out;
   z-index: 200;
-  color: black;
+  color: white;
   height: 0;
   width: 0;
   border-radius: 10px;
-  background-color: gold;
+  background-color: rgb(11, 11, 121);
 }
 .backdrop {
   position: fixed;
@@ -70,9 +67,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 100;
   display: none;
-  filter: blur(100px);
 }
-
 .modal .wrapper {
   height: 100%;
   width: 100%;

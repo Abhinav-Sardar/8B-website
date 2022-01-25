@@ -5,8 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap");
 
 body {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-uz8xOwy8gwhEy2IL0nyimFvqQwB8qXo85g&usqp=CAU);
-  background-size: 600%;
   color: white;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
@@ -22,7 +20,7 @@ body {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  height: 300px;
+  height: 500px;
   width: 420px;
   margin: 25px;
   border-radius: 20px;
@@ -38,14 +36,6 @@ body {
   margin: 10px 0;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 center {
   width: 100vw;
   display: flex;
@@ -69,6 +59,7 @@ input {
 }
 .wrap span {
   font-size: 25px;
+
   font-family: "Quicksand", sans-serif;
 }
 .wrap select {
@@ -79,4 +70,10 @@ input {
   font-family: "Lexend", sans-serif;
 
   font-size: 15px;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
