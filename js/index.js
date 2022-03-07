@@ -1,29 +1,20 @@
-const wrapper = document.createElement("div");
 // create an array which has a few parting messages to a friend
 const messages = [
   "Damn!, It has been so many years, We have been together",
   "Made so many memories together",
   "Unfortunately we have reached the dead end",
-  "Classes are most probably going to shuffle and we will be seperated. 😭😢",
+  "Survived a pandemic!",
+  "Classes are most probably going to shuffle and we will be seperated. <span>😭😢</span>",
   "So before we part ways, I would like to thank all the teachers and the students of 8b",
   "For making this journey memorable!",
-  "💘",
+  "<span>💘</span>",
   "Love you all!",
-  "-Abhinav",
+  "- By Abhinav , Abhiroop, Aniruddha, Shashank",
   "Enjoy The Website!",
 ];
-wrapper.classList.add("wrapper");
-document.body.appendChild(wrapper);
-messages.forEach((m, i) => {
-  const h3 = document.createElement("h3");
-  wrapper.appendChild(h3);
-  setTimeout(() => {
-    h3.style.animation = "1s appear ease-in-out";
-    h3.textContent = m;
-    h3.textContent === "💘" && h3.classList.add("heart");
-    if (i === messages.length - 1) {
-      setTimeout(() => {
-        document.body.innerHTML = `	    <ul class="nav">
+const content = `
+
+<ul class="nav">
 			<li class="left nav-items">8B Website</li>
 			<!-- <li class="left">8B Website</li> -->
 		<div class="links">
@@ -56,8 +47,30 @@ messages.forEach((m, i) => {
 
 </h3>
 			</main> 
-		</main>`;
-      }, 3000);
-    }
-  }, i * 3000);
-});
+		</main>
+
+`;
+window.onload = () => {
+  if (sessionStorage.getItem("seen")) {
+    document.body.innerHTML = content;
+  } else {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("wrapper");
+    document.body.appendChild(wrapper);
+    messages.map((m, i) => {
+      const h3 = document.createElement("h3");
+      setTimeout(() => {
+        h3.innerHTML = m;
+        h3.style.animation = "1s appear ease-in-out";
+        wrapper.appendChild(h3);
+        if (i === messages.length - 1) {
+          setTimeout(() => {
+            wrapper.remove();
+            document.body.innerHTML = content;
+            sessionStorage.setItem("seen", true);
+          }, 2000);
+        }
+      }, (i + 1) * 3000);
+    });
+  }
+};
