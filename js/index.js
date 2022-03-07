@@ -2,8 +2,8 @@
 const messages = [
   "Damn!, It has been so many years, We have been together",
   "Made so many memories together",
-  "Unfortunately we have reached the dead end",
   "Survived a pandemic!",
+  "Unfortunately we have reached the dead end",
   "Classes are most probably going to shuffle and we will be seperated. <span>😭😢</span>",
   "So before we part ways, I would like to thank all the teachers and the students of 8b",
   "For making this journey memorable!",
