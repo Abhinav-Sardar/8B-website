@@ -17,6 +17,7 @@ body {
 img {
   height: 300px;
   transition: 500ms ease-in-out;
+  cursor: pointer;
 }
 .img {
   display: flex;

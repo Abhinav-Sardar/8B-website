@@ -1,12 +1,7 @@
 function sortStudents(param) {
-  let ss = [...param];
-  let s = [];
-  param.forEach((p) => {
-    const randomIndex = Math.floor(Math.random() * ss.length);
-    s.push(ss[randomIndex]);
-    ss.splice(randomIndex, 1);
-  });
-  return s;
+  const s = [...param];
+  const sorted = s.sort((a, b) => a.rollNo - b.rollNo);
+  return sorted;
 }
 const students = [
   {
@@ -33,8 +28,7 @@ const students = [
 
   {
     name: "Anahita Kedawat",
-    tagline:
-      "Everyday may not be good, but there is something good in everyday.",
+    tagline: "Everyday may not be good, but there is something good in everyday.",
     bday: "29th March, 2009",
     rollNo: 7,
     hobbies: "Listening to Music/Songs, Photography and Reading",
@@ -97,8 +91,7 @@ const students = [
     bday: "23rd February, 2009",
     rollNo: 30,
     url: "Shiv.jpg",
-    hobbies:
-      "Playing Chess, Playing Cricket, Playing Badminton, PLaying Athletics",
+    hobbies: "Playing Chess, Playing Cricket, Playing Badminton, PLaying Athletics",
     // 10/10
     // 10/10
   },
@@ -160,8 +153,7 @@ const students = [
   },
   {
     name: "Swastik Shetty",
-    hobbies:
-      "Watching Anime, Playing Cricket, Drawing, Watching Netflix, Watching Videos ",
+    hobbies: "Watching Anime, Playing Cricket, Drawing, Watching Netflix, Watching Videos ",
     bday: "15th May, 2008",
     rollNo: 31,
     tagline: "Everything bores me except anime ",
@@ -234,13 +226,13 @@ const students = [
     bday: "11th March, 2008",
     tagline: "themusic_everywhere42 (insta) (Shameless selfpromo)",
     rollNo: 2,
+    url: "Abhiroop.jpg",
     // -0.69/10
     // -100 / 10
   },
   {
     name: "Saanvi Shukla",
-    hobbies:
-      "Singing, Dancing, Drawing, Painting, Organizing things if that considers 😂",
+    hobbies: "Singing, Dancing, Drawing, Painting, Organizing things if that considers 😂",
     bday: "30th October, 2008",
     tagline: "The deeper the night, the brighter the starlight.",
     rollNo: 23,
@@ -289,7 +281,11 @@ function renderStudents(param) {
    url
      ? `../profile/${url}`
      : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.YwBkVu5AEcpjBoyZvb7owgHaHa%26pid%3DApi&f=1"
- }'/>
+ }'
+ 
+ alt='Loading...'
+ 
+ />
  <span>Name: ${name}</span>
  <span>Tagline: <i>${tagline || "None"}</i></span>
  <span>Roll No: ${rollNo}</span>
@@ -306,15 +302,12 @@ document.addEventListener("DOMContentLoaded", () => {
   renderStudents(students);
 });
 function checkify(first, second) {
-  return String(first)
-    .toLocaleLowerCase()
-    .trim()
-    .includes(String(second).toLocaleLowerCase().trim());
+  return String(first).toLocaleLowerCase().trim().includes(String(second).toLocaleLowerCase().trim());
 }
 function onInput(char) {
   if (currentField === "All") {
     const filteredStudents = students.filter(
-      (student) =>
+      student =>
         checkify(student.name, char) ||
         checkify(student.tagline, char) ||
         checkify(student.bday, char) ||
@@ -322,14 +315,12 @@ function onInput(char) {
     );
     renderStudents(filteredStudents);
   } else {
-    const filteredStudents = students.filter((student) =>
-      checkify(student[currentField], char)
-    );
+    const filteredStudents = students.filter(student => checkify(student[currentField], char));
     renderStudents(filteredStudents);
   }
 }
 
-select.addEventListener("change", (e) => {
+select.addEventListener("change", e => {
   const { value } = e.target;
   if (value === "Tagline" || value === "Name" || value === "Hobbies") {
     currentField = String(value).toLocaleLowerCase();

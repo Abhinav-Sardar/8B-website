@@ -5,7 +5,7 @@ const data = [
     Birthday: "19th March",
     Tagline: "Mard Ko Dard Kabhi Nahi Hota ( Hota Hai 😢 )",
     Role: "Main Coder",
-    img: "../images/Abhinav.jpg",
+    img: "../profile/Abhinav.jpg",
   },
   {
     name: "Shashank Chandak",
